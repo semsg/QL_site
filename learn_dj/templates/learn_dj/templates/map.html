@@ -1,0 +1,36 @@
+{% extends "learn_dj/templates/base.html" %}
+
+{% block context %}
+	{% block text_01 %}
+	{% load static from staticfiles %}
+		<div  width="1000px" height="20px">
+		<h2 style="overflow: hidden; background-image: url({% static 'learn_dj/static/image/w9kRtO.jpg' %}); color: white; text-indent: 20px;">
+			{% block title_block_01 %} 
+				{{ title_block_01 }}
+			{% endblock %}
+		</h2>
+		</div>
+
+		<div style="background-image: url({% static 'learn_dj/static/image/w9kRtO.jpg' %}); padding: 5px 20px">
+			<br>
+				<a href="{% url 'main_page' %}">Главная страница</a>
+			<br>
+				<a href="{% url 'auto_light_news' %}">В мире автосвета</a>
+			<br>
+				<a href="{% url 'learning' %}">СД модуль GTR</a>
+			<br>
+				<a href="{% url 'articls' %}">СД модуль Koito</a>
+			<br>
+				<a href="{% url 'contact' %}">Контакты</a>
+			<br>
+				<a href="{% url 'map' %}">Карта сайта</a>
+		</div>
+	{% endblock %}
+
+	{% block horizont_line_02 %}
+		<table width="1000px" height="2px">
+			<tr>
+			<td width="100%"><left><font color="white"></font></left></td></tr></table>
+	{% endblock %}
+
+{% endblock %}

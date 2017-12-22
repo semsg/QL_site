@@ -1,0 +1,164 @@
+{% block head %}
+	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+      <title>
+        {{ title_site }}
+      </title>
+		{% load static from staticfiles %}	
+      <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css">
+	</head>
+{% endblock %}
+
+{% block body %}
+	{% load static from staticfiles %}
+	<body>
+		<div style='background: white; width: 1024px; margin-left: auto; margin-right: auto'>
+		<div style='position: absolute; width: 1024px; top: 50px'>
+
+	{% block logo %}
+		<div style="background-image: url({% static 'learn_dj/static/image/w9kRtO.jpg' %}); color: white; width: 1024px; height: 40px; padding: 5px">
+			<b>
+				<i>
+					<font size="6">
+						QL
+					</font>
+				</i>
+			</b>    
+			<b>
+	          <i>
+			    <font size='6'>
+			      {{ title_site }}
+			    </font> 
+			    <font size='5'>
+	      
+			    </font>
+			  </i>
+			</b>
+			<hr>
+			<hr>
+		</div>
+	{% endblock %}
+
+	{% block horizont_line_01 %}
+        <table width="1000" height="2">
+	        <tr>
+		        <td width="100%"><left><font color="white"></font></left></td></tr></table>
+	{% endblock %}
+
+	{% block context %}
+
+		{% block text_01 %}
+			{% block title_block_01 %}
+				{{ title_block_01 }}
+			{% endblock %}
+
+			{% block txtbl_01 %}
+				{{ txtbl_01 }}
+			{% endblock %}
+         {% endblock %}
+
+		{% block horizont_line_02 %}
+		{% endblock %}
+
+		{% block text_02 %}
+			{% block title_block_02 %}
+				{{ title_block_01 }}
+			{% endblock %}
+				{% block txtbl_02 %}
+					{{ txtbl_02 }}
+				{% endblock %}
+         {% endblock %}
+
+		{% block horizont_line03 %}
+		{% endblock %}
+
+
+		{% block text_03 %}
+			{% block title_block_03 %}
+				{{ title_block_01 }}
+			{% endblock %}
+					{% block txtbl_03 %}
+						{{ txtbl_03 }}
+					{% endblock %}
+         {% endblock %}
+
+		{% block horizont_line04 %}
+		{% endblock %}
+
+		{% block text_04 %}
+			{% block title_block_04 %}
+				{{ title_block_01 }}
+			{% endblock %}
+					{% block txtbl_04 %}
+						{{ txtbl_04 }}
+					{% endblock %}
+		{% endblock %}
+
+		{% block horizont_line05 %}	
+		{% endblock %}
+
+		{% block text_05 %}
+			{% block title_block_05 %}
+				{{ title_block_01 }}
+			{% endblock %}
+					{% block txtbl_05 %}
+						{{ txtbl_05 }}
+					{% endblock %}
+		{% endblock %}
+	{% endblock %}
+
+	{% block horizont_line_05 %}
+        <table width="1000" height="2">
+	        <tr>
+	        	<td width="100%"><left><font color="white"></font></left></td></tr></table>
+	{% endblock %}
+
+    {% block bottom %}
+        <div style="background-image: url({% static 'learn_dj/static/image/w9kRtO.jpg' %})">
+			<h3 style='color: white; text-indent: 20px'>
+				Контактная информация
+			</h3>
+                <div align="left" hspace='15'>
+                    <ul style="color: white; hspace: 15; type: disc">
+		                <li>
+							"Автосвет"
+							<br>
+							Мир светодиодных фар
+							<br>
+						</li>
+		    			<li>
+							<a href="mailto:semensg2014@gmail.com">
+								e-mail: ourmail@gmail.com
+							</a>
+						</li>
+					</ul>
+					<br>
+				</div>
+		</div>
+	{% endblock %}
+
+
+	{% block menu %}
+		<div style='position: fixed; top: 0px; background: white; padding: 5px; width: 1024px; height: 35px'>
+			<table width='1024px' height='30px' bgcolor='#808080'>
+				<tr>
+					<td width="6%"><center><font color='white'><a href="{% url 'main_page' %}"><b><i>QL</i></b></a></font></center></td>
+					<td width="13%"><center><font color='white'><a href="{% url 'main_page' %}">Автосвет</a></font></center></td>
+					<td width="13%"><center><font color='white'><a href="{% url 'auto_light_news' %}">В мире автосвета</a></font></center></td>
+					<td width="13%"><center><font color='white'><a href="{% url 'learning' %}">СД модуль GTR</a></font></center></td>
+					<td width="13%"><center><font color='white'><a href="{% url 'articls' %}">СД модуль Koito</a></font></center></td>
+					<td width="13%"><center><font color='white'><a href="{% url 'contact' %}">Контакты</a></font></center></td>
+					<td width="13%"><center><font color='white'><a href="{% url 'map' %}">Карта сайта</a></font></center></td>
+	  				<td width="13%"><center><font color='white'><a href="{% url 'map' %}"></a></font></center></td>
+				</tr>
+	      </table>
+      
+		</div>
+	{% endblock %}
+</div>
+</body>
+</html>
+{% endblock %}

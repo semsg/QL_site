@@ -1,0 +1,71 @@
+a {color: white}
+a:iink {color: white}
+a:visited {color: white}
+a:active {color: white}
+
+
+
+.text_main_pg {
+	color: black;
+	height: 55px;
+	width: 80%;
+	overflow: hidden;
+	}
+
+.context {
+	color: black;
+	font: arial;
+	text-indent: 20px;
+	}
+
+.coding {
+	text-indent: 20px;
+	white-space: pre;
+	border-style: solid;
+	border-width: 1px 1px 1px 10px;
+	border-color: #d9d9d9;
+	background: #c1d4c4;
+	height: 100px
+	min-width: 600px;
+	max-width: 100%;
+    	width: 900px;
+	}
+
+.fon {  
+	width: auto;
+	max-width: 980px;
+	position: fixed;
+        top: 15%;
+	left: 14%;
+	z-index: 100;
+	display: none;
+	background: (black, 0,5);
+	
+	}
+.win { 
+	display: none;
+	width: auto;
+	max-width: 980px;
+	position: fixed;
+        top: 15%;
+	left: 14%;
+	z-index: 200;
+	}
+
+.win:target {display: block;}
+
+.close {
+	z-index: 9999;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	color: green;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: green;
+	}

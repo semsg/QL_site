@@ -1,0 +1,19 @@
+{% extends "learn_dj/templates/base.html" %}
+
+{% block context %}
+	{% block text_01 %}
+	{% load static from staticfiles %}
+		<div  width="1000px" height="20px">
+		<pre><h2>
+			{{ txtbl_01 }}
+		</h2></pre>
+		
+	{% endblock %}
+
+	{% block horizont_line_02 %}
+		<table width="1000px" height="2px">
+			<tr>
+			<td width="100%"><left><font color="white"></font></left></td></tr></table>
+	{% endblock %}
+
+{% endblock %}

@@ -1,0 +1,100 @@
+{% extends "learn_dj/templates/base.html" %}
+
+
+{% block context %}
+{% load static from staticfiles %}
+		{% block title_block_01 %}
+     		 <div  width="1000px" height="20px">
+		  		<h2 style="overflow: hidden; background-image: url({% static 'learn_dj/static/image/w9kRtO.jpg' %}); color: white; text-indent: 20px;">
+				{{ title_block_01 }}
+				</h2>
+		    </div>
+		{% endblock %}
+      		<div style="margin: 20px">
+         		<form method=POST action='/learn_dj/answer/'>{% csrf_token %}
+           		 <h2>
+      				Заполните предлагаемую форму и нажмите кнопку "Отправить"
+			</h2>
+              <p>
+			<h5>
+				(Сообщения содержащие ненормативную лексику, угрозы, оскорбления и т. д. публиковаться не будут.)
+			</h5>
+				<table>
+                       <tr>
+                              <td aligh=right>
+                                  Ваше имя:
+                              </td>
+                              <td>
+                                  <input type=text name=name>
+                              </td>
+                       </tr>
+                       <tr>
+                              <td aligh=right>
+                                  Адрес Вашей электронной почты:
+                              </td>
+                              <td>
+                                  <input type=text name=email>
+                              </td>
+                        </tr>
+
+                        <tr>
+                              <td aligh=right>
+                                 Ваши сообщения и коментарии:
+                              </td>
+                              <td>
+                                  <textarea name=comment cols=30 rows=2>
+                                           
+                                  </textarea>
+                               </td>
+                        </tr>
+                        <tr>
+                              <td colspan=2 aligh=center>
+                                 <input type=submit value='Отправить'>
+                              </td>
+                        </tr>
+                   </table>
+          		</form>
+        </div>
+
+		{% block users_comments_01 %}
+      	 	<div>
+				<h2>
+      				Ваши сообщения
+				</h2>
+			</div>
+				{% for e in txt %}
+					<div style="float: bottom;  margin: 10px; padding-left: 10px; background-color: #f0f0fe; text-indent: 20px; border-color: #002164;">
+						<i>						
+							<u>
+								<b>
+									{{ e.user_name }}
+								</b>
+							</u>
+							<font size="-2">
+								--- {{ e.date_of_note }}
+							</font>
+						</i>
+						<br>			
+						{{ e.comment }}
+						<br>
+						<br>
+						{% if e.admin_answer %}
+							<div style="background-color: #d9d9d9; padding-left: 20px">
+								<i>
+									<b>
+										<u>admin</u>
+									</b>
+									
+									<font size="-2">
+										--- {{ e.date_of_note }}
+									</font>
+								</i>	
+									<br>
+									{{ e.admin_answer }}
+							</div>
+						{% endif %}
+						________________________________
+					</div>
+     			{% endfor %}
+		{% endblock %}
+{% endblock %}

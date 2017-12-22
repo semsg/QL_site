@@ -1,0 +1,116 @@
+{% extends "learn_dj/templates/base.html" %}
+
+{% block context %}
+{% load static from staticfiles %}
+
+	{% block text_01 %}
+		{% block title_block_01 %}
+			<a href="{% url 'auto_light_news' %}">
+		        <div  width="1000px" height="20px">
+				    <h2 style="background-image: url({% static 'learn_dj/static/image/w9kRtO.jpg' %}); color: white; text-indent: 20px;">
+				        {{ title_block_01 }}
+					</h2>
+				</div>
+			</a>
+		{% endblock %}
+		
+		{% block txtbl_01 %}
+			{% for e in html %}
+				<div style="float: left; width: 25%;">
+					<a href="{% url 'auto_light_news' %}#{{ e.name }}">
+					<img src="{% static e.image %}" clear="both" height="100px" align="center" alt="img">
+						<p class="text_main_pg">
+							{{ e.name }}
+						</p>	
+					</a>
+				</div>							
+			{% endfor %}
+		{% endblock %}
+	{% endblock %}	
+
+	{% block horizont_line_02 %}
+        <table width="1000px" height="2px">
+	    <tr>
+	    <td width="100%"><left><font color="white"></font></left></td></tr></table>	
+    {% endblock %}    
+
+	{% block text_02 %}
+		{% block title_block_02 %}
+        	<a href="{% url 'learning' %}">
+		        <div  width="1000px" height="20px">
+				    <h2 style="background-image: url({% static 'learn_dj/static/image/w9kRtO.jpg' %}); color: white; text-indent: 20px;">
+				        {{ title_block_02 }}
+					</h2>
+				</div>
+			</a>
+		{% endblock %}
+		
+		{% block txtbl_02 %}
+			<div style="margin-left: 10px;">	
+				<div>
+					<h3 align="center">
+					Обзор светодиодного модуля GTR 2416	
+					</h3>
+					<a href="{% url 'learning' %}">
+						<img src="{% static 'learn_dj/static/image/po17bh.jpg' %}" height="55px" align="left" hspace="15" alt="img">
+						<p class="text_main_pg">
+							Конструктивно GTR 2416 состоит из самого модуля с пластиковым отражателем и активным охлаждением, а так же внешнего блока управления.
+							<br>
+							<br>
+							
+		                </p>
+					</a>
+					<hr>
+					{% block horizont_line_in_text_02 %}
+				        <table width="1000px" height="2px">
+							<tr>
+								<td width="100%">
+									<left>
+									<font color="white">
+									</font>
+									</left>
+								</td>
+							</tr>
+						</table>
+			    	{% endblock %}
+				</div>
+				<div>
+					<h3 align="center">
+						Обзор светодиодного модуля Koito
+					</h3>
+					<a href="{% url 'articls' %}">
+						<img src="{% static 'learn_dj/static/image/IMG_20170119_204154m.jpg' %}" height="55px" align="left" hspace="15" alt="img">
+						<p class="text_main_pg">
+							Светодиодный модуль Koito предназначен для установки в блок фары головного света автомобиля и работает в двух режимах — "дальний свет" и "ближний свет".
+							<br>
+							<br>
+							
+		                </p>
+					</a>
+					<hr>
+					{% block horizont_line_in_text_12 %}
+				        <table width="1000px" height="2px">
+							<tr>
+								<td width="100%">
+									<left>
+									<font color="white">
+									</font>
+									</left>
+								</td>
+							</tr>
+						</table>
+			    	{% endblock %}
+				</div>
+			</div>
+       {% endblock %}
+	{% endblock %}	
+
+    {% block horizont_line03 %}
+        <table width="1000px" height="2px">
+	    <tr>
+	    <td width="100%"><left><font color="white"></font></left></td></tr></table>
+    {% endblock %}
+
+	
+	
+{% endblock %}
