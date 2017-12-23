@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '1n@c=qm_817&mk#2_=0#s(9p8-0qeu4_i)6p=xd6u+!*t0*m#7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = [u'semsg.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -55,7 +55,7 @@ ROOT_URLCONF = 'urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/home/semsg/QL-site/learn_dj/templates/'],
+        'DIRS': ['/media/giv/51466dba-1d41-423c-b2d0-1c9954a05cb7/Гив/Программирование/Сайты/web_project_01/QL_site/learn_dj/templates/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -68,7 +68,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'semsg.QL-site.web_project_01.wsgi.application'
+WSGI_APPLICATION = 'wsgi.application'
 
 
 # Database
@@ -124,7 +124,7 @@ STATIC_URL = '/static/'
 # see https://help.pythonanywhere.com/pages/DjangoStaticFiles for more info
 MEDIA_ROOT = u'/home/semsg/QL_site/media/'
 MEDIA_URL = '/media/'
-STATIC_ROOT = u'/home/semsg/QL-site/learn_dj/static/'
+STATIC_ROOT = u'/media/giv/51466dba-1d41-423c-b2d0-1c9954a05cb7/Гив/Программирование/Сайты/web_project_01/QL_site/learn_dj/static/'
 STATIC_URL = '/static/'
 
 ADMINS = (('Sem', 'sempythonanywhere@gmail.com'),)
