@@ -1,4 +1,4 @@
-"""web_project_01 URL Configuration
+"""mysite1 URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.10/topics/http/urls/
@@ -13,11 +13,18 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import *
 from django.contrib import admin
-
+from django.conf.urls import url
+from learn_dj import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-	url(r'^learn_dj/', include('learn_dj.urls')),
+    url(r'^$', views.main_page, name='main_page'),
+	url(r'^auto_light_news/$', views.auto_light_news, name='auto_light_news'),
+	url(r'^learning/$', views.learning, name='learning'),
+	url(r'^articls/$', views.articls, name='articls'),
+	url(r'^answer/$', views.answer, name='answer'),
+	url(r'^contact/$', views.contact, name='contact'),
+	url(r'^map/$', views.map, name='map'),
+
 ]

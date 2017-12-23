@@ -10,7 +10,7 @@ https://docs.djangoproject.com/en/1.10/howto/deployment/wsgi/
 import os
 
 from django.core.wsgi import get_wsgi_application
-
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "web_project_01.settings")
+project_home = u'/home/semsg/QL_site'
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "QL_site.settings")
 
 application = get_wsgi_application()

@@ -11,7 +11,7 @@
 		    </div>
 		{% endblock %}
       		<div style="margin: 20px">
-         		<form method=POST action='/learn_dj/answer/'>{% csrf_token %}
+         		<form method=POST action='/answer/'>{% csrf_token %}
            		 <h2>
       				Заполните предлагаемую форму и нажмите кнопку "Отправить"
 			</h2>
@@ -43,7 +43,7 @@
                               </td>
                               <td>
                                   <textarea name=comment cols=30 rows=2>
-                                           
+
                                   </textarea>
                                </td>
                         </tr>
@@ -64,7 +64,7 @@
 			</div>
 				{% for e in txt %}
 					<div style="float: bottom;  margin: 10px; padding-left: 10px; background-color: #f0f0fe; text-indent: 20px; border-color: #002164;">
-						<i>						
+						<i>
 							<u>
 								<b>
 									{{ e.user_name }}
@@ -74,7 +74,7 @@
 								--- {{ e.date_of_note }}
 							</font>
 						</i>
-						<br>			
+						<br>
 						{{ e.comment }}
 						<br>
 						<br>
@@ -84,11 +84,11 @@
 									<b>
 										<u>admin</u>
 									</b>
-									
+
 									<font size="-2">
 										--- {{ e.date_of_note }}
 									</font>
-								</i>	
+								</i>
 									<br>
 									{{ e.admin_answer }}
 							</div>
