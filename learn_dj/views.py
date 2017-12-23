@@ -18,11 +18,18 @@ def learning(request):
 	context = {'title_site': 'Автосвет', 'title_block_01': 'Обзор светодиодного модуля GTR 2416', 'html': html}
 	return render(request, 'learn_dj/templates/gtr_2416.html', context)
 
-def articls(request):
-	html = ArticleBox.objects.all()
-
+def koito(request):
+	html = ArticleBox.objects.filter(title='Обзор светодиодного модуля Koito')
+	
 	context = {'title_site': 'Автосвет', 'title_block_01': 'Обзор светодиодного модуля Koito', 'html': html}
 	return render(request, 'learn_dj/templates/koito.html', context)
+
+def gtr(request):
+	html = ArticleBox.objects.filter(title='Обзор светодиодного модуля GTR 2416')
+
+	context = {'title_site': 'Автосвет', 'title_block_01': 'Обзор светодиодного модуля GTR 2416', 'html': html}
+	return render(request, 'learn_dj/templates/koito.html', context)
+
 
 def contact(request):
 	txt = UserMessage.objects.filter(public_message=True)

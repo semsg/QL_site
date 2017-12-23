@@ -3,8 +3,6 @@ a:iink {color: white}
 a:visited {color: white}
 a:active {color: white}
 
-
-
 .text_main_pg {
 	color: black;
 	height: 55px;
@@ -51,6 +49,8 @@ a:active {color: white}
 	left: 14%;
 	z-index: 200;
 	}
+
+
 
 .win:target {display: block;}
 
