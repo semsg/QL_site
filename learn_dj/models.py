@@ -64,3 +64,26 @@ class ArticleBox(models.Model):
 	text_4 = models.TextField(blank=True)
 	text_5 = models.TextField(blank=True)
 	text_6 = models.TextField(blank=True)
+
+class PhotoView(models.Model):
+	name = models.CharField(max_length=200)
+	date = models.DateTimeField()
+	text_1 = models.TextField(blank=True)
+	text_2 = models.TextField(blank=True)
+	text_3 = models.TextField(blank=True)
+	image_1 = models.CharField(blank=True, max_length=200)
+	image_2 = models.CharField(blank=True, max_length=200)
+	image_3 = models.CharField(blank=True, max_length=200)
+	image_4 = models.CharField(blank=True, max_length=200)
+	image_5 = models.CharField(blank=True, max_length=200)
+	image_6 = models.CharField(blank=True, max_length=200)
+	image_7 = models.CharField(blank=True, max_length=200)
+	image_8 = models.CharField(blank=True, max_length=200)
+	image_9 = models.CharField(blank=True, max_length=200)
+	image_10 = models.CharField(blank=True, max_length=200)
+	image_11 = models.CharField(blank=True, max_length=200)
+	image_12 = models.CharField(blank=True, max_length=200)
+	
+	
+	class Meta:
+		ordering = ['date']

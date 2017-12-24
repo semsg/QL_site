@@ -27,4 +27,5 @@ urlpatterns = [
 	url(r'^answer/$', views.answer, name='answer'),
 	url(r'^contact/$', views.contact, name='contact'),
 	url(r'^map/$', views.map, name='map'),
+	url(r'^photo/$', views.photoview, name='photo'),
 ]

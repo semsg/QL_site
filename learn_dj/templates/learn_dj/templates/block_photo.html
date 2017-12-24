@@ -1,0 +1,215 @@
+{% extends "learn_dj/templates/base.html" %}
+
+{% block context %}
+{% load static from staticfiles %}
+
+	{% block text_01 %}
+		{% block title_block_01 %}
+			<div  style="width: 1030px; height: 20px; position: sticky;	top: 48px;">
+			    <h1 style="overflow: hidden; background-image: url({% static 'learn_dj/static/image/w9kRtO.jpg' %}); color: white; text-indent: 20px;">
+			        {{ title_block_01 }}
+				</h1>
+			</div>
+		{% endblock %}
+		
+		{% block txtbl_01 %}
+			<div style="margin-left: 10px">
+				<br>	
+				{% for e in html %}
+					<h2 align="center">
+						{{ e.name }}
+					</h2>
+					
+					<br>
+					<p class="context">
+							{% if e.text %}
+								{{ e.text }}
+								<br>
+								<br>
+							{% endif %}
+														
+							{% if e.text_1 %}
+								{{ e.text_1 }}
+								<br>
+								<br>
+							{% endif %}
+							
+							{% if e.text_2 %}
+								{{ e.text_2 }}
+								<br>
+								<br>
+							{% endif %}
+							
+							{% if e.text_3 %}
+								{{ e.text_3 }}
+								<br>
+								<br>
+							{% endif %}
+					</p>
+					{% block horizont_line_in_text %}
+       				 <table width="1000px" height="1px">
+						<tr>
+							<td width="100%"><left><font color="white"></font></left></td></tr></table>
+					{% endblock %} 
+
+					<div>
+						<a href="#{{ e.image_1 }}">
+							<div width="260" height="210px">
+							<img src="{% static e.image_1 %}" width="250" height="200px" align="left" hspace="15" alt="img"  border="10" bordercolor="white">
+						</div></a>
+							<div id="{{ e.image_1 }}" class="win">
+							<a href="#close" class="close">x</a>
+								<iframe width="980" height="800" src="{% static e.image_1 %}" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen>
+								</iframe>
+							</div>
+						
+						{% if e.image_2 %}
+						<a href="#{{ e.image_2 }}">
+							<img src="{% static e.image_2 %}" width="250" height="200px" align="left" hspace="15" alt="img" border="10" bordercolor="white">
+						</a>
+							<div id="{{ e.image_2 }}" class="win">
+							<a href="#close" class="close">x</a>
+								<iframe width="980" height="800" src="{% static e.image_2 %}" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen>
+								</iframe>
+							</div>
+							
+						{% endif %}
+						{% if e.image_3 %}
+						
+						<a href="#{{ e.image_3 }}">
+							
+							<img src="{% static e.image_3 %}" width="250" height="200px" align="left" hspace="15" alt="img" border="10" bordercolor="white">
+						</a>
+						
+							<div id="{{ e.image_3 }}" class="win">
+							<a href="#close" class="close">x</a>
+								<iframe width="980" height="800" src="{% static e.image_3 %}" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen>
+								</iframe>
+							</div>
+							
+						{% endif %}
+						
+						{% if e.image_4 %}
+<br>
+							<br>
+						<a href="#{{ e.image_4 }}">
+							<img src="{% static e.image_4 %}" width="250" height="200px" align="left" hspace="15" alt="img" border="10" bordercolor="white">
+						</a>
+							<div id="{{ e.image_4 }}" class="win">
+							<a href="#close" class="close">x</a>
+								<iframe width="980" height="800" src="{% static e.image_4 %}" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen>
+								</iframe>
+							</div>
+							
+						{% endif %}
+						{% if e.image_5 %}
+						<a href="#{{ e.image_5 }}">
+							<img src="{% static e.image_5 %}" width="250" height="200px" align="left" hspace="15" alt="img" border="10" bordercolor="white">
+						</a>
+							<div id="{{ e.image_5 }}" class="win">
+							<a href="#close" class="close">x</a>
+								<iframe width="980" height="800" src="{% static e.image_5 %}" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen>
+								</iframe>
+							</div>
+							
+						{% endif %}
+	
+						{% if e.image_6 %}
+						<a href="#{{ e.image_6 }}">
+							<img src="{% static e.image_6 %}" width="250" height="200px" align="left" hspace="15" alt="img" border="10" bordercolor="white">
+						</a>
+							<div id="{{ e.image_6 }}" class="win">
+							<a href="#close" class="close">x</a>
+								<iframe width="980" height="800" src="{% static e.image_6 %}" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen>
+								</iframe>
+							</div>
+							
+						{% endif %}
+						{% if e.image_7 %}
+						<a href="#{{ e.image_7 }}">
+							<img src="{% static e.image_7 %}" width="250" height="200px" align="left" hspace="15" alt="img" border="10" bordercolor="white">
+						</a>
+							<div id="{{ e.image_7 }}" class="win">
+							<a href="#close" class="close">x</a>
+								<iframe width="980" height="800" src="{% static e.image_7 %}" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen>
+								</iframe>
+							</div>
+							
+						{% endif %}
+				
+						{% if e.image_8 %}
+						<a href="#{{ e.image_8 }}">
+							<img src="{% static e.image_8 %}" width="250" height="200px" align="left" hspace="15" alt="img" border="10" bordercolor="white">
+						</a>
+							<div id="{{ e.image_8 }}" class="win">
+							<a href="#close" class="close">x</a>
+								<iframe width="980" height="800" src="{% static e.image_8 %}" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen>
+								</iframe>
+							</div>
+							
+						{% endif %}
+						{% if e.image_9 %}
+						<a href="#{{ e.image_9 }}">
+							<img src="{% static e.image_9 %}" width="250" height="200px" align="left" hspace="15" alt="img" border="10" bordercolor="white">
+						</a>
+							<div id="{{ e.image_9 }}" class="win">
+							<a href="#close" class="close">x</a>
+								<iframe width="980" height="800" src="{% static e.image_9 %}" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen>
+								</iframe>
+							</div>
+							
+						{% endif %}
+
+						{% if e.image_10 %}
+						<a href="#{{ e.image_10 }}">
+							<img src="{% static e.image_10 %}" width="250" height="200px" align="left" hspace="15" alt="img" border="10" bordercolor="white">
+						</a>
+							<div id="{{ e.image_10 }}" class="win">
+							<a href="#close" class="close">x</a>
+								<iframe width="980" height="800" src="{% static e.image_10 %}" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen>
+								</iframe>
+							</div>
+							
+						{% endif %}
+						{% if e.image_11 %}
+						<a href="#{{ e.image_11 }}">
+							<img src="{% static e.image_11 %}" width="250" height="200px" align="left" hspace="15" alt="img" border="10" bordercolor="white">
+						</a>
+							<div id="{{ e.image_11 }}" class="win">
+							<a href="#close" class="close">x</a>
+								<iframe width="980" height="800" src="{% static e.image_11 %}" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen>
+								</iframe>
+							</div>
+							
+						{% endif %}
+
+						{% if e.image_12 %}
+						<a href="#{{ e.image_12 }}">
+							<img src="{% static e.image_12 %}" width="250" height="200px" align="left" hspace="15" alt="img" border="10" bordercolor="white">
+						</a>
+							<div id="{{ e.image_12 }}" class="win">
+							<a href="#close" class="close">x</a>
+								<iframe width="980" height="800" src="{% static e.image_12 %}" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen>
+								</iframe>
+							</div>
+						{% endif %}
+
+					</div>
+
+						{% block horizont_line_in_text0 %}
+       				 <table width="1000px" height="1px">
+						<tr>
+							<td width="100%"></td></tr></table>
+						{% endblock %} 
+				{% endfor %}	
+			</div>
+       {% endblock %}
+	
+	{% endblock %}
+    {% block horizont_line_02 %}
+        <table width="1000px" height="2px">
+			<tr>
+				<td width="100%"><left><font color="white"></font></left></td></tr></table>
+    {% endblock %}
+
+{% endblock %}

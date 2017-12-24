@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from learn_dj.models import UserMessage, TextNew, LedMod_GTR2416, ArticleBox
+from learn_dj.models import UserMessage, TextNew, LedMod_GTR2416, ArticleBox, PhotoView
 from django.core.mail import send_mail
 from datetime import datetime
 
@@ -57,3 +57,10 @@ def auto_light_news(request):
 
 	context = {'title_site': 'Автосвет', 'title_block_01': 'В мире автосвета', 'html': html}
 	return render(request, 'learn_dj/templates/auto_light_news.html', context)
+
+def photoview(request):
+	html = PhotoView.objects.all()
+
+	context = {'title_site': 'Автосвет', 'title_block_01': 'Светодиоды в деле','html': html}
+	return render(request, 'learn_dj/templates/block_photo.html', context)
+
