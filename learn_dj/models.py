@@ -84,6 +84,5 @@ class PhotoView(models.Model):
 	image_11 = models.CharField(blank=True, max_length=200)
 	image_12 = models.CharField(blank=True, max_length=200)
 	
-	
 	class Meta:
 		ordering = ['date']

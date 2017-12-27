@@ -1,8 +1,8 @@
 {% block tabl_01 %}
 	
      <table width="500px" height="40px" cellpadding="5" cellspacing="2">
-			<i><caption><b>Технические характеристики</b></caption>
-			<tr height="25%" bgcolor="#d9d9d9">
+			<i><caption><b>Основные технические характеристики</b></caption>
+			<tr height="25%" bgcolor="#9a9a9a">
 				<th width="70%">
 					<i>Параметр</i>
 				</th>
@@ -10,47 +10,18 @@
 					<i>Значение</i>
 				</th>
 			</tr>
-			
-			<tr height="25%">
-				<th>
-					{{ e.tab_par_1 }}
-				</th>
+			{% for key, value in tb.items %}
+			<tr height="25%" bgcolor="#d1d1d1">
+				<td><i>
+					{{ key }}
+				</i></td>
 				<td align="center">
-					{{ e.tab_dat_1 }}
+					{{ value }}
 				</td>
 			</tr>
-			<tr height="25%" bgcolor="#d9d9d9">
-				<th>
-					{{ e.tab_par_2 }}
-				</th>
-				<td align="center">
-					{{ e.tab_dat_2 }}
-				</td>
-			</tr>
-			<tr height="25%">
-				<th>
-					{{ e.tab_par_3 }}
-				</th>
-				<td align="center">
-					{{ e.tab_dat_3 }}
-				</td>
-				<tr height="25%" bgcolor="#d9d9d9">
-				<th>
-					{{ e.tab_par_4 }}
-				</th>
-				<td align="center">
-					{{ e.tab_dat_4 }}
-				</td>
-			</tr>
-			<tr height="25%" bgcolor="#d9d9d9">
-				<th>
-					{{ e.tab_par_5 }}
-				</th>
-				<td align="center">
-					{{ e.tab_dat_5 }}
-				</td>
-			</tr>
-			</tr></i>		
+			{% endfor %}
+	
+			</i>	
 		</table>
 	
     

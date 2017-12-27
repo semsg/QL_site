@@ -1,5 +1,5 @@
 a {color: white}
-a:iink {color: white}
+a:link {color: white}
 a:visited {color: white}
 a:active {color: white}
 
@@ -25,47 +25,52 @@ a:active {color: white}
 	border-width: 1px 1px 1px 10px;
 	border-color: #d9d9d9;
 	background: #c1d4c4;
-	height: 100px
+	height: 100px;
 	min-width: 600px;
 	max-width: 100%;
     	width: 900px;
 	}
 
 .fon {  
-	width: auto;
-	max-width: 980px;
-	position: fixed;
-        top: 15%;
-	left: 14%;
-	z-index: 100;
-	display: none;
-	background: (black, 0,5);
-	
+	width: 90%;
+        height: 90%;
+        text-align: center;
+        padding: 15px;
+        
+        display: none;
+	background-color: yellow;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+		
 	}
 .win { 
-	display: none;
-	width: auto;
-	max-width: 980px;
+	width: 1;
+	height: 1;
 	position: fixed;
         top: 15%;
 	left: 14%;
 	z-index: 200;
 	}
 
-.win:target {display: block;}
+
+
+.fon:target {display: block;}
 
 .close {
-	z-index: 9999;
+	z-index: 0;
+	display: block;
 	position: absolute;
 	top: 0;
+	right: 0;
+	bottom: 0;
 	left: 0;
-	width: 20px;
-	height: 20px;
-	text-align: center;
-	color: green;
-	border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-style: solid;
-	border-width: 2px;
-	border-color: green;
+	margin: auto;
+
+	width: 95%;
+	height: 95%;
+	background: rgba(102, 102, 102, 0.5);
 	}

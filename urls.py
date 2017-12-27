@@ -28,4 +28,5 @@ urlpatterns = [
 	url(r'^contact/$', views.contact, name='contact'),
 	url(r'^map/$', views.map, name='map'),
 	url(r'^photo/$', views.photoview, name='photo'),
+	url(r'^modal/$', views.modal, name='modal'),
 ]

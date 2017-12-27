@@ -12,6 +12,9 @@
 			</div>
 		{% endblock %}
 		
+				<br>
+				<br>
+				{% include "learn_dj/templates/table.html" %}
 		{% block txtbl_01 %}
 			<div style="margin-left: 10px">	
 				{% for e in html %}
@@ -23,11 +26,11 @@
 							<img src="{% static e.image %}" height="200px" align="left" hspace="15" alt="img">
 						</a>
 						
-							<div id="{{ e.image }}" class="win">
-								<a href="#close" class="close">x
-									</a>
-								<iframe width="980" height="800" src="{% static e.image %}" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen>
-								</iframe>
+							<div id="{{ e.image }}" class="fon">
+								<a href="#close" class="close"></a>
+								<div class="win">
+								<img src="{% static e.image %}" height="600px" align="left" alt="img">
+								</div>
 							</div>
 					</div>
 					
@@ -45,21 +48,13 @@
 							<br>
 															
 		                		</p>
-					{% block horizont_line_in_text %}
-       				 <table width="1000px" height="2px">
-						<tr>
-							<td width="100%"><left><font color="white"></font></left></td></tr></table>
-					{% endblock %} 
+					{% include "learn_dj/templates/horisont_line.html" %}
 					
-				{% endfor %}
+			{% endfor %}	
 			</div>
        {% endblock %}
 	{% endblock %}	
 
-    {% block horizont_line_02 %}
-        <table width="1000px" height="2px">
-			<tr>
-				<td width="100%"><left><font color="white"></font></left></td></tr></table>
-    {% endblock %}
+    {% include "learn_dj/templates/horisont_line.html" %}
 
 {% endblock %}

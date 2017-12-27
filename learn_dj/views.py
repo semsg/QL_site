@@ -14,8 +14,9 @@ def main_page(request):
 
 def learning(request):
 	html = LedMod_GTR2416.objects.all()
-
-	context = {'title_site': 'Автосвет', 'title_block_01': 'Обзор светодиодного модуля GTR 2416', 'html': html}
+	tb = {'Мощность (вт)' : '29', 'Световой поток (лм)' : '1800', 'Цветовая температура (к)' : '5000', 'Светодиод' : 'LG'} 
+	
+	context = {'title_site': 'Автосвет', 'title_block_01': 'Обзор светодиодного модуля GTR 2416', 'html': html, 'tb': tb}
 	return render(request, 'learn_dj/templates/gtr_2416.html', context)
 
 def koito(request):
@@ -60,7 +61,13 @@ def auto_light_news(request):
 
 def photoview(request):
 	html = PhotoView.objects.all()
-
+	
 	context = {'title_site': 'Автосвет', 'title_block_01': 'Светодиоды в деле','html': html}
 	return render(request, 'learn_dj/templates/block_photo.html', context)
+
+def modal(request):
+	
+
+	context = {'title_site': 'Автосвет', 'title_block_01': 'Модальное окно'}
+	return render(request, 'learn_dj/templates/modal_wind.html', context)
 
